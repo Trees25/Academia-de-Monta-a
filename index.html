@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia de Montaña - Próximamente</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1A2526 0%, #2A3A3B 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #F5E6CC;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 200px;
+            margin-bottom: 30px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #D94F3D, #F5A623);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            animation: slideUp 1.8s ease-in-out;
+        }
+
+        .contact {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .contact a {
+            color: #F5A623;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #D94F3D;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social a {
+            font-size: 2rem;
+            color: #F5E6CC;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social a:hover {
+            transform: scale(1.2);
+            color: #E87D3E;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 0.9; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Fondo animado */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle, rgba(245, 166, 35, 0.1) 0%, rgba(245, 166, 35, 0) 70%);
+            animation: pulse 15s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .social a {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <img src="logo.png" alt="Academia de Montaña Logo" class="logo">
+        <h1>¡Próximamente!</h1>
+        <p>Academia de Montaña está preparando una experiencia única. ¡Explora el mundo con nosotros muy pronto!</p>
+        <div class="contact">
+            Contáctanos: <a href="mailto:info@academiademontana.com">info@academiademontana.com</a>
+        </div>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook">📘</a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter">🐦</a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram">📷</a>
+        </div>
+    </div>
+</body>
+</html>
